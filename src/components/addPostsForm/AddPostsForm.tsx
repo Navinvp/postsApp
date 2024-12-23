@@ -9,10 +9,10 @@ const AddPostForm: React.FC = () => {
   const [addPost] = useAddPostMutation();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value, type, checked } = e.target;
+    const { name, value } = e.target;
     setFormData({
         ...formData,
-        [name]: type === 'checkbox' ? checked : value,
+        [name]: value,
     });
   };
 
@@ -79,17 +79,6 @@ const AddPostForm: React.FC = () => {
                         onChange={handleChange}
                         required
                     />
-                </div>
-                <div className="mb-3 form-check">
-                    <input
-                        type="checkbox"
-                        name="completed"
-                        id="completed"
-                        className="form-check-input"
-                        checked={formData.completed}
-                        onChange={handleChange}
-                    />
-                    <label htmlFor="completed" className="form-check-label">Completed</label>
                 </div>
                 <button type="submit" className="btn btn-primary" disabled={isLoading}>
                     {isLoading ? 'Adding...' : 'Add Post'}

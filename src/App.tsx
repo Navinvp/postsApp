@@ -1,19 +1,14 @@
-import React, { useEffect } from 'react';
-import { useGetPostsQuery } from './posts/postsApi';
+import React from 'react';
 
 import PostsList from './components/postsList/PostsList';
 import AddPostsForm from './components/addPostsForm/AddPostsForm';
 
+import './App.css';
+
 const App: React.FC = () => {
-  // const { refetch } = useGetPostsQuery(undefined, { skip: true });
-
-  // useEffect(() => {
-  //   refetch(); // Trigger fetching posts
-  // }, [refetch]);
-
   return (
     <div>
-        <h1>Posts Application</h1>
+        <h1 className='header'>Posts Application</h1>
         <AddPostsForm />
         <PostsList />
       </div>
