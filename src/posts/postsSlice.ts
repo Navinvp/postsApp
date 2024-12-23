@@ -1,10 +1,10 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export interface Post {
-  userId: number; // The ID of the user who created the post
-  id?: number;    // The unique ID of the post (optional for new posts)
-  title: string;  // The title of the post
-  body: string;   // The content/body of the post
+  userId: number;
+  id?: number;
+  title: string;
+  body: string;
 }
 
 interface PostsState {

@@ -29,7 +29,6 @@ const AddPostForm: React.FC = () => {
             });
             console.log('Post Created');
             setFormData({ userId: '', title: '', body: '', completed: false });
-            // Refresh posts after successful post submission
         } catch (err) {
             setError('An error occurred while adding the post');
             console.error('Error adding post:', err);
