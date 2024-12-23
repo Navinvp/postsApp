@@ -1,0 +1,21 @@
+.table {
+  margin: 6rem 5.75rem;
+}
+
+.table th {
+  min-width: 4rem;
+  text-align: center;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f6fdff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #d5f5ff;
+}
+
+tbody td:nth-child(1),
+tbody td:nth-child(2) {
+  text-align: center;
+}
